@@ -2,7 +2,7 @@ import { Input, Component, ViewEncapsulation, EventEmitter, Output } from '@angu
 
 @Component({
   selector: 'custom-button',
-  template: `<button (click)="handleClick()"><ng-content></ng-content></button>Count: {{this.clicksCt }}`,
+  template: `<button (click)="handleClick()"><slot></slot></button>Count: {{this.clicksCt }}`,
   styles: [`
     button {
       border: solid 3px;
